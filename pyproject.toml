@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "airflow-tests"
+version = "0.1.0"
+description = ""
+authors = ["yiannis-zen <yiannis.gkoufas@zendesk.com>"]
+readme = "README.md"
+packages = [{include = "airflow_tests"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+apache-airflow = "^2.3.3"
+apache-airflow-providers-docker = "^3.0.0"
+apache-airflow-providers-github = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
