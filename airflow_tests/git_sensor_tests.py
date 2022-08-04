@@ -38,7 +38,6 @@ tag_sensor = GithubTagSensor(
     task_id='example_tag_sensor',
     tag_name='v1.0',
     repository_name="apache/airflow",
-    timeout=60,
     poke_interval=10,
     dag=dag,
 )
@@ -68,7 +67,6 @@ github_sensor = GithubSensor(
     method_name="get_repo",
     method_params={'full_name_or_id': "apache/airflow"},
     result_processor=lambda repo: tag_checker(repo, 'v1.0'),
-    timeout=60,
     poke_interval=10,
     dag=dag,
 )
